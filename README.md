@@ -14,6 +14,8 @@ At the moment (July 16, 2019), the project still doesn't use redux for state man
 
 <img width="507" alt="Frontend2" src="https://user-images.githubusercontent.com/18225438/61270612-5e5f9480-a7cc-11e9-9f8c-b1cc6ea1d794.PNG">
 
+<img width="493" alt="LOGIN" src="https://user-images.githubusercontent.com/18225438/61270744-c0b89500-a7cc-11e9-94de-ce78d6411801.PNG">
+
 <img width="639" alt="Frontend3" src="https://user-images.githubusercontent.com/18225438/61270625-6e777400-a7cc-11e9-87a9-8aca3affbb3f.PNG">
 
 
