@@ -1,9 +1,6 @@
 import React, {Component} from 'react'
 import ProxyServices from '../Service/ProxyServices'
-import { authLoginFetch} from "../actions/aunthentication";
-import AuthenticationReducer from "../reducers/AuthenticationReducer";
 import { connect } from 'react-redux';
-import {Redirect} from 'react-router-dom';
 
 class LoginComponent extends Component{
 
@@ -52,12 +49,8 @@ class LoginComponent extends Component{
         console.log("Login Process..");
         console.log("Username: " + this.state.formControls.username.value);
         console.log("Password: " + this.state.formControls.password.value);
-       /* const { dispatch } = this.props;
 
-        dispatch(authLoginFetch(this.state.formControls.username.value, this.state.formControls.password.value));
-*/
-
-       ProxyServices.executeBasicAuthenticationService(this.state.formControls.username.value, this.state.formControls.password.value)
+        ProxyServices.executeBasicAuthenticationService(this.state.formControls.username.value, this.state.formControls.password.value)
            .then(response => response.data)
            .then((json) => {
                console.log("Response:", JSON.stringify(json));
@@ -70,21 +63,6 @@ class LoginComponent extends Component{
     }
 
     render() {
-
-       /* const { from } = this.props.location.state || {from: { pathname: '/'}}
-        const { isUserHasLogin, errorLogin, signing, username, password } = this.state
-
-        console.log("Username Render", this.props.username);
-
-        if(this.props.username != '' && this.props.username != null){
-            console.log("User Has Login...")
-            localStorage.setItem("username", username);
-            localStorage.setItem("password", password);
-            return <Redirect to={from} />
-        }
-
-        console.log("User Has not Login...")*/
-
 
         return (
             <div className="container">
@@ -140,8 +118,6 @@ function mapStateToProps(state){
     const { username, password } = AuthenticationReducer
 
     console.log("Username from StateProps:", username)
-   // console.log("With length:", username.length)
-
     let usernameLength = username?username.length:0;
 
     return{

@@ -1,9 +1,6 @@
 import React from 'react';
 import {Provider} from 'react-redux'
 import './App.css';
-
-import Home2 from './component/Home2'
-import AppRouter from './route/router'
 import HeaderMenu from "./component/HeaderMenu";
 import Header from "./component/Header";
 import MainContent from "./component/MainContent";

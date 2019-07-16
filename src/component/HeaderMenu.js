@@ -11,20 +11,7 @@ class HeaderMenu extends React.Component{
         this.state = {
 
         }
-
-        this.logout = this.logout.bind(this);
     }
-
-    logout(e){
-
-       /* e.preventDefault();
-        console.log("Logout.....")
-        AuthenticationService.logout();
-        let path = `/login`;
-        this.props.history.push(path);*/
-    }
-
-
 
     render() {
         return(
@@ -46,7 +33,7 @@ class HeaderMenu extends React.Component{
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="/logout">
-                                    <button type="button" className="btn btn-success" onClick={this.logout}>Logout</button></a>
+                                    <button type="button" className="btn btn-success">Logout</button></a>
                             </li>
                         </ul>
                     </div>

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios'
 import AuthenticationService from "../Service/ProxyServices";
 
 class UserList extends React.Component{
@@ -11,7 +10,6 @@ class UserList extends React.Component{
             users : [],
         }
 
-        /*this.getUserList = this.getUserList.bind(this);*/
     }
 
 
@@ -30,8 +28,6 @@ class UserList extends React.Component{
         return(
             <div>
                 <div className="card">
-                   {/* <div className="card-header">User Lists</div>
-                    <div className="card-body">*/}
                         <table className="table table-striped">
                             <tbody>
                             <tr>
@@ -47,7 +43,6 @@ class UserList extends React.Component{
                             {console.log(this.state.users)}
                             </tbody>
                         </table>
-                    {/*</div>*/}
                 </div>
             </div>
         );
