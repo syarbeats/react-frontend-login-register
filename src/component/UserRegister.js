@@ -130,7 +130,7 @@ class UserRegister extends React.Component{
 
                             <div className="form-group">
                                 <div className="col-sm-offset-2 col-sm-10">
-                                    <button type="submit" onClick={() => this.submitData()} className="btn btn-info">Submit</button>
+                                    <button id="register" type="submit" onClick={() => this.submitData()} className="btn btn-info">Submit</button>
                                 </div>
                             </div>
                     </div>

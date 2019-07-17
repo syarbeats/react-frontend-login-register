@@ -70,7 +70,7 @@ class LoginComponent extends Component{
                     <div className="col-md-3"/>
                     <div className="col-md-6">
                         <div className="card">
-                            {this.state.hasLoginFailed && <div className="alert alert-warning">Invalid Credentials</div>}
+                            {this.state.hasLoginFailed && <div id="error" className="alert alert-warning">Invalid Credentials</div>}
                             {this.state.showSuccessMessage && <div>Login Sucessful</div>}
                             <div className="card-header" style={{"color": "green"}}><b></b></div>
                             <div className="card-body">
@@ -96,7 +96,7 @@ class LoginComponent extends Component{
                                     <div className="col-md-3">
                                     </div>
                                     <div className="col-md-6" >
-                                        <button className="btn btn-info" onClick={this.loginClicked}>Login</button>
+                                        <button id="login" className="btn btn-info" onClick={this.loginClicked}>Login</button>
                                         <button style={{"margin-left": "10px"}} className="btn btn-info">Cancel</button>
 
                                     </div>

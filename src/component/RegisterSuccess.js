@@ -14,7 +14,7 @@ class RegisterSuccess extends React.Component{
                 <div className="card">
                     <div className="card-header"/>
                         <div className="card-body">
-                            <h1>Please check your email to active your email !!!! <Link to='/login'>Login</Link></h1>
+                            <h1 id="info">Please check your email to active your email !!!! <Link to='/login'>Login</Link></h1>
                         </div>
                 </div>
             </div>

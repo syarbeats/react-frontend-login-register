@@ -8,6 +8,7 @@ import Index from '../component/Index'
 import Logout from '../component/Logout'
 import RegisterSuccess from '../component/RegisterSuccess'
 import ResetPassword from "../component/ResetPassword";
+import CheckEmail from '../component/CheckEmail'
 
 function AppRouter() {
     return (
@@ -19,6 +20,7 @@ function AppRouter() {
                     <Route path="/login" exact component = {Login} />
                     <Route path="/logout" exact component = {Logout} />
                     <Route path="/reset" exact component = {ResetPassword} />
+                    <Route path="/checkemail" exact component = {CheckEmail} />
                     <Route path="/user/register" exact component = {RegisterUser} />
                     <AuthenticatedRoute path="/user/list" exact component={UserList} />
                 </Switch>

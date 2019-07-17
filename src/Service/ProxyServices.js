@@ -51,6 +51,13 @@ class ProxyServices {
         return axios.get(`${API_URL}/api/all-users`);
 
     }
+
+    resetPasswordRequest(email){
+        let payload = {
+            email: email
+        }
+        return axios.post(`${API_URL}/api/resetpassword`, payload);
+    }
 }
 
 export default new ProxyServices()
