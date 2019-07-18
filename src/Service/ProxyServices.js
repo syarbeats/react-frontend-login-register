@@ -2,7 +2,7 @@ import axios from 'axios'
 import {Redirect} from "react-router-dom";
 import React from "react";
 
-const API_URL = 'http://localhost:8080'
+const API_URL = 'http://128.199.158.139:8080'
 
 export const USER_NAME_SESSION_ATTRIBUTE_NAME = 'authenticatedUser'
 export const PASSWORD_SESSION_ATTRIBUTE_NAME = 'password'
