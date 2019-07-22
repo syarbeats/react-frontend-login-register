@@ -17,7 +17,7 @@ class ProxyServices {
         let basicAuth = btoa(username + ':' + password);
         axios.defaults.headers.common = {'Authorization': `Basic ${basicAuth}`};
 
-        return axios.post(`${API_URL}/mongodb-app/api/auth`, payload)
+        return axios.post(`${API_URL}/api/auth`, payload)
     }
 
 
