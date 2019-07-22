@@ -48,7 +48,7 @@ class ProxyServices {
         let basicAuth = btoa(localStorage.getItem(USER_NAME_SESSION_ATTRIBUTE_NAME) + ':' + localStorage.getItem(PASSWORD_SESSION_ATTRIBUTE_NAME));
         axios.defaults.headers.common = {'Authorization': `Basic ${basicAuth}`};
 
-        return axios.get(`${API_URL}/mongodb-app/api/all-users`);
+        return axios.get(`${API_URL}/api/all-users`);
 
     }
 
@@ -56,7 +56,7 @@ class ProxyServices {
         let payload = {
             email: email
         }
-        return axios.post(`${API_URL}/mongodb-app/api/resetpassword`, payload);
+        return axios.post(`${API_URL}/api/resetpassword`, payload);
     }
 }
 
