@@ -58,7 +58,7 @@ class UserRegister extends React.Component{
 
             console.log("Payload:"+JSON.stringify( payload ));
 
-            axios.post("http://mongoapi.ap-southeast-1.elasticbeanstalk.com:8080/mongodb-app/api/register", payload)
+            axios.post("http://mongoapi.ap-southeast-1.elasticbeanstalk.com:8080/api/register", payload)
                 .then(res => {
                     console.log("Response:", res.data);
                     console.log("Status:"+res.status);
