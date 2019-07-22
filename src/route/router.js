@@ -7,6 +7,7 @@ import UserList from "../component/UserList";
 import Index from '../component/Index'
 import Logout from '../component/Logout'
 import RegisterSuccess from '../component/RegisterSuccess'
+import RegisterFailed from '../component/RegisterFailed'
 import ResetPassword from "../component/ResetPassword";
 import CheckEmail from '../component/CheckEmail'
 
@@ -17,6 +18,7 @@ function AppRouter() {
                 <Switch>
                     <Route path="/" exact component = {Index} />
                     <Route path="/register-successfully" exact component = {RegisterSuccess}/>
+                    <Route path="/register-failed" exact component = {RegisterFailed}/>
                     <Route path="/login" exact component = {Login} />
                     <Route path="/logout" exact component = {Logout} />
                     <Route path="/reset" exact component = {ResetPassword} />

@@ -62,7 +62,8 @@ class UserRegister extends React.Component{
                 .then(res => {
                     console.log("Response:", res.data);
                     console.log("Status:"+res.status);
-                    if(res.status == "200"){
+                    console.log("Message:"+ res.data.message);
+                    if(res.status == "200" && res.data.message != "Your username is not available, please find the new one"){
                         this.setState({message: "User has been registered successfully!",
                             username: '',
                             firstname: '',
@@ -72,7 +73,10 @@ class UserRegister extends React.Component{
                         });
 
                         this.props.history.push("/register-successfully")
+                    }else{
+                        this.props.history.push("/register-failed")
                     }
+
                 })
         }else {
             console.log("Please fill the data completely!");
