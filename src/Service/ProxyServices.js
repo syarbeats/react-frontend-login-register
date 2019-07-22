@@ -2,7 +2,7 @@ import axios from 'axios'
 import {Redirect} from "react-router-dom";
 import React from "react";
 
-const API_URL = 'http://localhost:8080'
+const API_URL = 'http://mongoapi.ap-southeast-1.elasticbeanstalk.com:8080'
 
 export const USER_NAME_SESSION_ATTRIBUTE_NAME = 'authenticatedUser'
 export const PASSWORD_SESSION_ATTRIBUTE_NAME = 'password'
@@ -17,7 +17,7 @@ class ProxyServices {
         let basicAuth = btoa(username + ':' + password);
         axios.defaults.headers.common = {'Authorization': `Basic ${basicAuth}`};
 
-        return axios.post(`${API_URL}/api/auth`, payload)
+        return axios.post(`${API_URL}/mongodb-app/api/auth`, payload)
     }
 
 
@@ -48,7 +48,7 @@ class ProxyServices {
         let basicAuth = btoa(localStorage.getItem(USER_NAME_SESSION_ATTRIBUTE_NAME) + ':' + localStorage.getItem(PASSWORD_SESSION_ATTRIBUTE_NAME));
         axios.defaults.headers.common = {'Authorization': `Basic ${basicAuth}`};
 
-        return axios.get(`${API_URL}/api/all-users`);
+        return axios.get(`${API_URL}/mongodb-app/api/all-users`);
 
     }
 
@@ -56,7 +56,7 @@ class ProxyServices {
         let payload = {
             email: email
         }
-        return axios.post(`${API_URL}/api/resetpassword`, payload);
+        return axios.post(`${API_URL}/mongodb-app/api/resetpassword`, payload);
     }
 }
 
