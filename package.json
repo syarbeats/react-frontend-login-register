@@ -12,7 +12,7 @@
     "@material-ui/icons": "^3.0.2",
     "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
-    "chart.js": "^2.8.0",
+    "chart.js": "^2.9.4",
     "classnames": "^2.2.6",
     "core-js": "^2.6.5",
     "enzyme": "^3.9.0",
